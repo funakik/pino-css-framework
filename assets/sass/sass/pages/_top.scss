@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+@import "../config/config";
+@import "../mixin/mixin";
+
+.about{
+	img{
+		border-radius: 50%;
+	}
+}

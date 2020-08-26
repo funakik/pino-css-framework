@@ -1,0 +1,78 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module Grids
+/////////////////////////////////////////
+@import "config/config";
+@import "mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+.grids{
+	@include flex-container(row, nowrap, stretch, flex-start);
+	&.column{
+		@include flex-direction(column);
+	}
+
+	@for $value from 1 to 12 {
+		.grid-#{$value} {
+			@include flex(1 1 100%);
+			@include flex-basis((100/12) * $value * 1%);
+		}
+	}
+	// & .grid{
+	// 	@include flex(1 1 100%);
+	// 	&-1{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*1%);
+	// 	}
+	// 	&-2{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*2%);
+	// 	}
+	// 	&-3{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*3%);
+	// 	}
+	// 	&-4{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*4%);
+	// 	}
+	// 	&-5{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*5%);
+	// 	}
+	// 	&-6{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*6%);
+	// 	}
+	// 	&-7{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*7%);
+	// 	}
+	// 	&-8{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*8%);
+	// 	}
+	// 	&-9{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*9%);
+	// 	}
+	// 	&-10{
+	// 		// @extend .grid;
+	// 		@include flex-basis((100/12)*10%);
+	// 	}
+	// 	&-11{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*11%);
+	// 	}
+	// 	&-12{
+	// 		@extend .grid;
+	// 		@include flex-basis((100/12)*12%);
+	// 	}
+	// }
+}
+
+
+
+

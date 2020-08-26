@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+@import "config/config";
+@import "mixin/mixin";
+
+//_reset.scss
+@import "parts/reset";
+//_config.scss
+@import "config/config";
+//_parts.scss
+@import "parts/parts-basic";
+@import "parts/parts-buttons";
+@import "parts/parts-forms";
+@import "parts/parts-grids";
+@import "parts/parts-tables";
+@import "parts/parts-typography";
+@import "parts/parts-wrapuplist";
+@import "parts/parts-slider";
+//icon web font
+@import "parts/font-icon";
+//_module.scss
+@import "modules/module-list";
+@import "modules/module-modal";
+@import "modules/module-pickup-items";
+//layout
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+////////////////////////
+//
+////////////////////////
+*{
+	box-sizing: border-box;
+}
+html{
+/*	font-size:62.5%;*/
+	font-size: calc(100vh / 6.6);
+	scroll-behavior: smooth;
+}
+body{
+/*	@include font-size($base-font-size);*/
+	font-size: 0.16rem;
+	line-height: 1.8;
+	letter-spacing: .01em;
+	overflow: scroll;
+}
+

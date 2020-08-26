@@ -1,0 +1,316 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module bass
+/////////////////////////////////////////
+@import "config/config";
+@import "mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+
+
+////////////////////////
+//Link
+////////////////////////
+a{
+	color: $link;
+	&:link{
+		color: $link;
+		cursor: pointer;
+	}
+	&:visited{
+		color: desaturate($link,10%);
+		cursor: pointer;
+	}
+	&:hover{
+		color: lighten($link,10%);
+		cursor: pointer;
+	}
+	&:active,&:focus{
+		background: lighten($link,30%);
+		@include border-radius(2px,2px,2px,2px);
+		color: $link;
+		cursor: pointer;
+
+	}
+}
+
+////////////////////////
+//List
+////////////////////////
+ul{
+	list-style: none;
+	li{
+		margin: 10px 0;
+	}
+	& ul,ol,dl{
+		padding-left: $bass-font-size * 2px;
+	}
+	& .no-style{
+		list-style-type: none;
+	}
+	& .disc{
+		list-style-type: disc;
+	}
+	& .circle{
+		list-style-type: circle;
+	}
+}
+ol{
+	padding: 0 $bass-font-size * 1.2px;
+	li{
+		list-style-type: decimal;
+		margin: 10px 0;
+	}	
+	& .no-style{
+		list-style-type: none;
+	}
+}
+dl{
+	dt{
+		font-weight: bolder;
+	}
+	dd{
+		padding-left: $bass-font-size * 0.01rem;
+	}
+}
+////////////////////////
+//Space
+////////////////////////
+	$values: 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80;
+	////////////////////////
+	//margin set
+	////////////////////////
+	@each $value in $values {
+		.m-#{$value} {
+			margin: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-b-#{$value} {
+			margin-bottom: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-t-#{$value} {
+			margin-top: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-l-#{$value} {
+			margin-left: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-r-#{$value} {
+			margin-right: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-x-#{$value} {
+			margin-left: 0.004rem * $value !important;
+			margin-right: 0.004rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.m-y-#{$value} {
+			margin-bottom: 0.004rem * $value !important;
+			margin-top: 0.004rem * $value !important;
+		}
+	}
+	////////////////////////
+	//padding set
+	////////////////////////
+	@each $value in $values {
+		.p-#{$value} {
+			padding: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-b-#{$value} {
+			padding-bottom: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-t-#{$value} {
+			padding-top: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-l-#{$value} {
+			padding-left: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-r-#{$value} {
+			padding-right: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-x-#{$value} {
+			padding-left: 0.01rem * $value !important;
+			padding-right: 0.01rem * $value !important;
+		}
+	}
+	@each $value in $values {
+		.p-y-#{$value} {
+			padding-bottom: 0.01rem * $value !important;
+			padding-top: 0.01rem * $value !important;
+		}
+	}
+////////////////////////
+//Layout
+////////////////////////
+
+	////////////////////////
+	//Float
+	////////////////////////
+	.float{
+		&-l{float: left !important;}
+		&-r{float: right !important;}
+	}
+	////////////////////////
+	//display
+	////////////////////////
+	.display-b{display: block;}
+	.display-ib{display: inline-block;}
+	.display-i{display: inline;}
+	.display-f__row-nowrap{@include flex-container(row, nowrap, stretch, flex-start);}
+	.display-f__column-nowrap{@include flex-container(column, nowrap, stretch, flex-start);}
+	.display-f__row-wrap{@include flex-container(row, wrap, stretch, flex-start);}
+	.display-f__column-wrap{@include flex-container(column, wrap, stretch, flex-start);}
+	////////////////////////
+	//
+	////////////////////////
+	$arrow-size: 6px;
+	.chip{
+		background: $color-text;
+		@include border-radius(6px,6px,6px,6px);
+		color: #fff;
+		display: inline-block;
+		line-height: 1.2;
+		padding: 3px 15px;
+		position: relative;
+		word-wrap: break-word;
+		word-break: break-all;
+		z-index: 0;
+		&:after {
+			content: "";
+			border: $arrow-size transparent solid; 
+			display: block;
+			@include font-size(0);
+			line-height: 0;
+			position: absolute;
+			z-index: -1;
+		}
+		&.error{
+			$chip-color: lighten($color-error,15%);
+			background: $chip-color;
+			color: #fff;
+			&.bottom:after {
+				border-bottom-color: $chip-color;
+			}
+			&.top:after {
+				border-top-color: $chip-color;
+			}
+		}
+		&.warning{
+			$chip-color: $color-warning;
+			background: $chip-color;
+			color: $color-text;
+			&.bottom:after {
+				border-bottom-color: $chip-color;
+			}
+			&.top:after {
+				border-top-color: $chip-color;
+			}
+		}
+		&.top{
+			margin-bottom: 6px;
+			&:after {
+				border-top-color: $color-text;
+				bottom: $arrow-size * -2;
+			}
+		}
+		&.bottom{
+			margin-top: 6px;
+			&:after {
+				border-bottom-color: $color-text;
+				top: $arrow-size * -2;
+			}
+		}
+		&:empty{
+			display: none;
+		}
+	}
+	.batch{
+		background: $information;
+		border: 0.01rem #fff solid;
+		color: #fff;
+		display: inline-block;
+		line-height: 1.2;
+		@include font-size(13);
+		font-weight: bolder;
+		&.circle{
+			@include border-radius(50%,50%,50%,50%);
+			padding: 5px;
+		}
+		&.square{
+			@include border-radius(6px,6px,6px,6px);
+			padding: 5px 10px;
+		}
+		&.error{
+			background: $color-error;
+			color: #fff;
+		}
+		&.warning{
+			background: $color-warning;
+			color: $color-text;
+		}
+		&:empty{
+			display: none;
+		}
+	}
+	.flashmessage{
+		@include border-radius(4px,4px,4px,4px);
+		color: #fff;
+		font-weight: bolder;
+		margin: 20px 0;
+		padding: 5px 15px;
+		i{
+		}
+		&--success{
+			@extend .flashmessage;
+			background: $color-success;
+		}
+		&--warning{
+			@extend .flashmessage;
+			background: $color-warning;
+		}
+		&--error{
+			@extend .flashmessage;
+			background: $color-error;
+		}
+	}
+	.border-content{
+		border: 0.01rem $color-border solid;
+		.border-content__head{
+			background: $color-border;
+			padding: 10px;
+		}
+		.border-content__body{
+			padding: 10px;
+		}
+	}
+////////////////////////
+//clear-fix
+////////////////////////
+.clear-fix:after {
+	clear: both;
+	content: "";
+	display: block;
+	text-indent: -9999px;
+	line-height: 0;
+	overflow: hidden;
+}
