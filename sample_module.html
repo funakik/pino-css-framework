@@ -568,66 +568,135 @@
 	<h1>Slider</h1>
 	<div class="contents__inner">
 		<p><code>.slider</code>スライダー。TOPとか、広告とか。</p>
-		<section class="slider" aria-label="Gallery">
-		  <ol class="slider__viewport">
-		    <li id="slider__slide1"
-		        tabindex="0"
-		        class="slider__slide">
-				<div class="slider__snapper"></div>
-				<a href="#slider__slide4"
-				class="slider__prev">Go to last slide</a>
-				<a href="#slider__slide2"
-				class="slider__next">Go to next slide</a>
-		    </li>
-		    <li id="slider__slide2"
-		        tabindex="0"
-		        class="slider__slide">
-		      <div class="slider__snapper"></div>
-		      <a href="#slider__slide1"
-		         class="slider__prev">Go to previous slide</a>
-		      <a href="#slider__slide3"
-		         class="slider__next">Go to next slide</a>
-		    </li>
-		    <li id="slider__slide3"
-		        tabindex="0"
-		        class="slider__slide">
-		      <div class="slider__snapper"></div>
-		      <a href="#slider__slide2"
-		         class="slider__prev">Go to previous slide</a>
-		      <a href="#slider__slide4"
-		         class="slider__next">Go to next slide</a>
-		    </li>
-		    <li id="slider__slide4"
-		        tabindex="0"
-		        class="slider__slide">
-		      <div class="slider__snapper"></div>
-		      <a href="#slider__slide3"
-		         class="slider__prev">Go to previous slide</a>
-		      <a href="#slider__slide1"
-		         class="slider__next">Go to first slide</a>
-		    </li>
-		  </ol>
-		  <aside class="slider__navi">
-		    <ol class="slider__navi-list">
-		      <li class="slider__navi-item">
-		        <a href="#slider__slide1"
-		           class="slider__navi-button">Go to slide 1</a>
-		      </li>
-		      <li class="slider__navi-item">
-		        <a href="#slider__slide2"
-		           class="slider__navi-button">Go to slide 2</a>
-		      </li>
-		      <li class="slider__navi-item">
-		        <a href="#slider__slide3"
-		           class="slider__navi-button">Go to slide 3</a>
-		      </li>
-		      <li class="slider__navi-item">
-		        <a href="#slider__slide4"
-		           class="slider__navi-button">Go to slide 4</a>
-		      </li>
-		    </ol>
-		  </aside>
-		</section>
+
+		<div class="slider">
+
+			<input type="radio" id="slider1" name="slider" title="slide1" class="slider-btn" checked="checked"/>
+			<input type="radio" id="slider2" name="slider" title="slide2" class="slider-btn"/>
+			<input type="radio" id="slider3" name="slider" title="slide3" class="slider-btn"/>
+			<input type="radio" id="slider4" name="slider" title="slide4" class="slider-btn"/>
+
+			<div class="slider-inner">
+
+				<div class="slider-contents">
+					<div>
+						<div class="slider-contents-img bg-light-border">
+							<img src="pino-css-framework/images/works/pino.png" alt="" height="auto" width="100%">
+							<label name="slider" for="slider4" class="slider-btn__prev"></label>
+							<label name="slider" for="slider2" class="slider-btn__next"></label>
+						</div>
+						<div class="m-x-15">
+							<h3 class="m-0 display-i heading-2">CSS Framework</h3>
+							<p class="font-size-12 m-b-5 font-weight-bolder">design / HTML,CSS(scss)</p>
+							<p>意地でもJSを使わずにCSSのみで再現するためのCSSフレームワークです。</p>
+							<p>レスポンシブ対応なので、なんとなく整います。</p>
+							<p>想定利用シーンは、スクラッチ開発する時の土台。CSSを理解している方が枠組みだけ欲しい時に！</p>
+							<div class="m-10">
+								<a class="button block" href="pino-css-framework/index.html" target="_blank">サンプル</a>
+								<a class="button outline block m-t-10" href="https://github.com/funakik/pino-css-framework" target="_blank">Git Hub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider-contents">
+					<div>
+						<div class="slider-contents-img bg-light-border">
+							<img src="pino-css-framework/images/works/monoful.png" alt="" height="auto" width="100%">
+							<label name="slider" for="slider1" class="slider-btn__prev"></label>
+							<label name="slider" for="slider3" class="slider-btn__next"></label>
+						</div>
+						<div class="m-x-15">
+							<h3 class="m-0 display-i heading-2">倉庫管理を最適化</h3>
+							<p class="font-size-12">株式会社モノフル 様</p>
+							<p class="font-size-12 m-b-5 font-weight-bolder"> UI/UX</p>
+							<p>倉庫で荷積み・降ろしを行うドライバー向け受付サービス「<a href="https://monoful.co.jp/truckbook" target="_blank">トラック簿</a>」、手間のかかる配車・集車業務を効率化する「<a href="https://monoful.co.jp/dplus" target="_blank">配車プラス</a>」、業務リソースを最適化する「<a href="https://monoful.co.jp/tnavi" target="_blank">適材ナビ</a>」のデザインを担当。</p>
+							<p>ITリテラシーが高くない利用者にも受け入れてもらえるようなUIを目指しました。</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider-contents">
+					<div>
+						<div class="slider-contents-img bg-light-border">
+							<div class="frame-wrapper__video">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/mhW7zaDO5Bk?rel=0" frameborder="0" allow="autoplay; encrypted-media" 	allowfullscreen></iframe>
+							</div>
+							<label name="slider" for="slider2" class="slider-btn__prev"></label>
+							<label name="slider" for="slider4" class="slider-btn__next"></label>
+						</div>
+						<div class="m-x-15">
+							<h3 class="m-0 display-i heading-2">anicare<span class="font-size-12">[アニケア]</span></h3>
+							<p class="font-size-12">ペットゴー株式会社 様</p>
+							<p class="font-size-12 m-b-5 font-weight-bolder">design / HTML,CSS(scss)</p>
+							<p>ペットホテルを予約・評価できるサービスのデザイン〜コーディングまでをひとりで担当。</p>
+							<div class="frame-wrapper__video m-t-10">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/HjLEOBX_888?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="slider-contents">
+					<div>
+						<div class="slider-contents-img bg-light-border">
+							<img src="pino-css-framework/images/works/illustration.jpg" alt="" height="auto" width="100%">
+							<label name="slider" for="slider3" class="slider-btn__prev"></label>
+							<label name="slider" for="slider1" class="slider-btn__next"></label>
+						</div>
+						<div class="m-x-15">
+							<h3 class="m-0 display-i heading-2">Illustration<span class="font-size-12">[イラストレーション]</span></h3>
+							<p class="font-size-12 m-b-5 font-weight-bolder">UI design / HTML,CSS(scss)</p>
+							<p>ページ内の挿絵やアイコンなどもデザインと一緒に制作できます。</p>
+							<div class="grids m-t-10">
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_01.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_02.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_03.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_04.png" alt="" height="auto" width="100%">
+								</div>
+							</div>
+							<div class="grids">
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_05.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_06.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_07.png" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/mypic_08.png" alt="" height="auto" width="100%">
+								</div>
+							</div>
+							<div class="grids">
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/psc_08_s.jpg" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/psc_07_s.jpg" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+									<img src="pino-css-framework/images/works/psc_06_s.jpg" alt="" height="auto" width="100%">
+								</div>
+								<div class="grid-3 p-5">
+								</div>
+								<div class="grid-3 p-5">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 	</div>
 </div>
 

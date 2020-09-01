@@ -10,35 +10,13 @@
 ////////////////////////
 .container{
 	margin: 0 auto;
-	@include mq(xs) {
-		width: 100%;
-	}
-	@include mq(sm) {
-		width: 92%;
-	}
-	@include mq(md) {
-		max-width: 980px;
-		width: 96%;
-	}
-	@include mq(lg) {
-		min-width: 960px;
-		max-width: 1280px;
-		width: 92%;
-	}
 }
 .contents{
-	@include mq(xs) {
-		margin: 32px auto;
-	}
-	@include mq(sm) {
-		margin: 32px auto;
-	}
-	@include mq(md) {
-		margin: 60px auto;
-	}
-	@include mq(lg) {
-		margin: 60px auto;
-	}
+	margin: 0 auto;
+	max-width: 120vh;
+	min-width: 320px;
+	padding: .56rem 0;
+	width: 92%;
 }
 
 ////////////////////////

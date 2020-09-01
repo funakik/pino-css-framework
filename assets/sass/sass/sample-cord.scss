@@ -43,12 +43,6 @@ body{
 }
 .sample{
 	background: #fff;
-	.container{
-		margin: 0 auto;
-		max-width: 100%;
-		min-width: 100%;
-		width: 100%;
-	}
 	p{
 		word-wrap: break-word;
 		word-break: break-all;
@@ -125,23 +119,6 @@ body{
 	}
 
 	.contents{
-		@include mq(xs) {
-			margin: 0 auto;
-			padding: 20px 10px;
-			width: 100%;
-		}
-		@include mq(sm) {
-			margin: 40px auto;
-			width: 90%;
-		}
-		@include mq(md) {
-			margin: 60px auto;
-			width: 80%;
-		}
-		@include mq(lg) {
-			margin: 80px auto;
-			width: 60%;
-		}
 		& > h1,.heading-1{
 			color: $color-primary;			
 		}

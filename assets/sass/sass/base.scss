@@ -35,13 +35,13 @@
 }
 html{
 /*	font-size:62.5%;*/
-	font-size: calc(100vh / 6.6);
+	font-size: calc(100vh / 5.72);
 	scroll-behavior: smooth;
 }
 body{
 /*	@include font-size($base-font-size);*/
 	font-size: 0.16rem;
-	line-height: 1.8;
+	line-height: 1.9;
 	letter-spacing: .01em;
 	overflow: scroll;
 }

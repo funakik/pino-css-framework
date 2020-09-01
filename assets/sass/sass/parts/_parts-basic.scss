@@ -84,39 +84,39 @@ dl{
 	////////////////////////
 	@each $value in $values {
 		.m-#{$value} {
-			margin: 0.004rem * $value !important;
+			margin: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-b-#{$value} {
-			margin-bottom: 0.004rem * $value !important;
+			margin-bottom: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-t-#{$value} {
-			margin-top: 0.004rem * $value !important;
+			margin-top: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-l-#{$value} {
-			margin-left: 0.004rem * $value !important;
+			margin-left: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-r-#{$value} {
-			margin-right: 0.004rem * $value !important;
+			margin-right: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-x-#{$value} {
-			margin-left: 0.004rem * $value !important;
-			margin-right: 0.004rem * $value !important;
+			margin-left: 0.01rem * $value !important;
+			margin-right: 0.01rem * $value !important;
 		}
 	}
 	@each $value in $values {
 		.m-y-#{$value} {
-			margin-bottom: 0.004rem * $value !important;
-			margin-top: 0.004rem * $value !important;
+			margin-bottom: 0.01rem * $value !important;
+			margin-top: 0.01rem * $value !important;
 		}
 	}
 	////////////////////////
