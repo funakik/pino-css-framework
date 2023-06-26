@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Icons:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap");
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* fonts */
+  --font-noto-sans-jp: "Noto Sans JP";
+  --font-lato: Lato;
+  --font-inter: Inter;
+  --font-roboto: Roboto;
+  --font-material-icons: "Material Icons";
+
+  /* font sizes */
+  --font-size-lg: 18px;
+  --font-size-21xl: 40px;
+  --font-size-xl: 20px;
+  --font-size-base: 16px;
+  --font-size-mini: 15px;
+  --font-size-9xl: 28px;
+  --font-size-smi: 13px;
+  --font-size-13xl: 32px;
+  --font-size-61xl: 80px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-whitesmoke-100: #f0f0ed;
+  --color-whitesmoke-200: #eee;
+  --color-black: #000;
+  --color-darkslategray: #333;
+  --color-orangered: #df2613;
+  --color-gray: rgba(255, 255, 255, 0.8);
+  --color-dimgray: #666;
+
+  /* Paddings */
+  --padding-2xs: 11px;
+  --padding-base: 16px;
+  --padding-17xl: 36px;
+  --padding-10xs: 3px;
+  --padding-8xs: 5px;
+  --padding-base-6: 16.6px;
+  --padding-mini: 15px;
+  --padding-12xs-8: 0.8px;
+
+  /* border radiuses */
+  --br-301xl: 320px;
+  --br-5xs: 8px;
+  --br-141xl: 160px;
+}
